@@ -1,0 +1,56 @@
+<div class="container mt-5">
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+
+    <h2 class="fw-bold">
+      Liste des Contrats
+    </h2>
+
+    <button class="btn btn-primary">
+      + Nouveau Contrat
+    </button>
+
+  </div>
+
+
+  <table class="table table-bordered table-hover shadow-sm">
+
+    <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Client</th>
+      <th>Type</th>
+      <th>Montant</th>
+      <th>Statut</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+
+
+    <tbody>
+
+    <tr *ngFor="let c of contrats">
+
+      <td>{{ c.id }}</td>
+      <td>{{ c.client }}</td>
+      <td>{{ c.type }}</td>
+      <td>{{ c.montant }} DH</td>
+      <td>{{ c.statut }}</td>
+
+      <td>
+        <button class="btn btn-sm btn-warning me-2">
+          Modifier
+        </button>
+
+        <button class="btn btn-sm btn-danger">
+          Supprimer
+        </button>
+      </td>
+
+    </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
